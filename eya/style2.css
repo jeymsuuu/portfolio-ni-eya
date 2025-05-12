@@ -1,0 +1,134 @@
+/* Correct selector: #about, not 'about' */
+#about {
+    display: flex;
+    align-items: center; /* Vertically center items in the container */
+    justify-content: space-between;
+    cursor: default;
+    padding: 60px 10%;
+    background-color: #F5F5DC;
+    flex-wrap: wrap;
+    min-height: 100vh; /* Ensure full section height */
+}
+
+/* Text container */
+.abouttext {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center text */
+    padding-right: 40px;
+}
+
+.abouttext h2 {
+    font-size: 36px;  
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #A08963;
+    animation: slideLeft 1s ease forwards;
+}
+
+.abouttext h2 span {
+    color: #654321;
+}
+
+.abouttext h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #A08963;
+    margin-bottom: 20px;
+}
+
+.abouttext p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #A08963;
+    line-height: 1.6;
+}
+
+
+/* Image container */
+.aboutimg {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* Horizontally center image */
+    align-items: center;       /* Vertically center image */
+    animation: slideLeft 1s ease forwards;
+}
+
+.aboutimg img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0 10px 25px #654321;
+    animation: slideLeft 1s ease forwards;
+}
+
+/* animations and keyframes*/
+
+.fliptext {
+    display: inline-block;
+    animation: flipIn 1s ease-in-out forwards;
+    transform-origin: center;
+}
+
+
+@keyframes flipIn {
+    0% {
+        transform: rotateX(100deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
